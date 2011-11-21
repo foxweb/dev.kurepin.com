@@ -1,4 +1,12 @@
 Dev::Application.routes.draw do
+  resources :news
+
+  namespace :admin do
+    resources :puffer_users
+    resources :news
+  end
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
