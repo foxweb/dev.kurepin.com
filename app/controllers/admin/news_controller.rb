@@ -8,7 +8,7 @@ class Admin::NewsController < Puffer::Base
     # field :id
     field :title
     field :content
-    # field :created_at
+    field :created_at
     # field :updated_at
   end
 
@@ -16,7 +16,7 @@ class Admin::NewsController < Puffer::Base
     # field :id
     field :title
     field :content
-    # field :created_at
+    field :created_at
     # field :updated_at
   end
 
