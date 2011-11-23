@@ -1,0 +1,2 @@
+class CkeditorComponent < TextComponent
+end

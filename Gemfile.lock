@@ -42,6 +42,11 @@ GEM
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
+    carrierwave (0.5.8)
+      activesupport (~> 3.0)
+    ckeditor (3.6.3)
+      mime-types (~> 1.16)
+      orm_adapter (~> 0.0.5)
     clearance (0.13.0)
       diesel (~> 0.1.5)
       rails (>= 3.0)
@@ -71,6 +76,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.17.2)
+    mini_magick (3.3)
+      subexec (~> 0.1.0)
     multi_json (1.0.3)
     mysql2 (0.3.10)
     orm_adapter (0.0.5)
@@ -112,6 +119,7 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    subexec (0.1.0)
     therubyracer (0.9.9)
       libv8 (~> 3.3.10)
     thor (0.14.6)
@@ -131,10 +139,13 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby
+  carrierwave
+  ckeditor
   clearance
   coffee-rails (~> 3.1.0)
   execjs
   jquery-rails
+  mini_magick
   mysql2
   puffer!
   rails (= 3.1.3)

@@ -15,7 +15,7 @@ class Admin::NewsController < Puffer::Base
   form do
     # field :id
     field :title
-    field :content
+    field :content, :type => :ckeditor
     field :created_at, :type => :date
     # field :updated_at
   end

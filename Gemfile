@@ -11,6 +11,9 @@ gem 'therubyracer'
 gem 'puffer', :git => 'git://github.com/puffer/puffer.git'
 gem 'bcrypt-ruby'
 gem 'clearance'
+gem 'ckeditor'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Gems used only for assets and not required
 # in production environments by default.
