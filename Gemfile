@@ -14,6 +14,8 @@ gem 'clearance'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'haml'
+gem 'slim-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

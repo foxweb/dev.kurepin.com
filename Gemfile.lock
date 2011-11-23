@@ -62,6 +62,7 @@ GEM
     erubis (2.7.0)
     execjs (1.2.9)
       multi_json (~> 1.0)
+    haml (3.1.3)
     hike (1.2.1)
     i18n (0.6.0)
     jquery-rails (1.0.18)
@@ -115,11 +116,17 @@ GEM
       railties (~> 3.1.0)
       sass (~> 3.1.10)
       tilt (~> 1.3.2)
+    slim (1.0.4)
+      temple (~> 0.3.4)
+      tilt (~> 1.3.2)
+    slim-rails (0.2.1)
+      slim (>= 0.9.2)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     subexec (0.1.0)
+    temple (0.3.4)
     therubyracer (0.9.9)
       libv8 (~> 3.3.10)
     thor (0.14.6)
@@ -144,12 +151,14 @@ DEPENDENCIES
   clearance
   coffee-rails (~> 3.1.0)
   execjs
+  haml
   jquery-rails
   mini_magick
   mysql2
   puffer!
   rails (= 3.1.3)
   sass-rails (~> 3.1.0)
+  slim-rails
   therubyracer
   turn
   uglifier
