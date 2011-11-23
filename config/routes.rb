@@ -2,7 +2,7 @@ Dev::Application.routes.draw do
   resources :news
 
   namespace :admin do
-    resources :puffer_users
+    resources :users
     resources :news
   end
 
