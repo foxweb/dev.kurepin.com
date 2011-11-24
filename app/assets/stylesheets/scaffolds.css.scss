@@ -1,12 +1,31 @@
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Cuprum'), url('http://themes.googleusercontent.com/static/fonts/cuprum/v2/wHBEZCjwNI3HN2fD1RQJgw.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('PT Sans'), local('PTSans-Regular'), url('http://themes.googleusercontent.com/static/fonts/ptsans/v2/yrzXiAvgeQQdopyG8QSg8Q.woff') format('woff');
+}
+
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'PT Sans', verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px; }
 
+h1, h2, h3 {
+  font-family: 'Cuprum', verdana, arial, helvetica, sans-serif;
+  font-weight: 400;
+}
+
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'PT Sans', verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px; }
 

@@ -79,6 +79,7 @@ GEM
     mime-types (1.17.2)
     mini_magick (3.3)
       subexec (~> 0.1.0)
+    minitest (2.8.1)
     multi_json (1.0.3)
     mysql2 (0.3.10)
     orm_adapter (0.0.5)
@@ -154,6 +155,7 @@ DEPENDENCIES
   haml
   jquery-rails
   mini_magick
+  minitest
   mysql2
   puffer!
   rails (= 3.1.3)
