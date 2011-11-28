@@ -17,7 +17,7 @@ html, body {
   position: relative;
 	text-align: left;
 }
-.head {
+#header {
 	display: block;
 	/*background-color: #B8FF4C;*/
 	/*background-color: #FFFF99;*/
@@ -71,7 +71,7 @@ html, body {
 .clear {
 	clear: both;
 }
-.foot {
+#footer {
   bottom: 0;
 	display: block;
 	height: 130px;
@@ -81,7 +81,7 @@ html, body {
 	overflow: visible;
 	/*border-top: #666666 solid 1px;*/
 }
-.head, .foot {
+#header, #footer {
 	padding: 0.3em 0;
 }
 /* my addons */
