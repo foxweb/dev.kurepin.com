@@ -1,6 +1,6 @@
 p#notice = notice
 h1 = @news.title
-div = raw @news.content
+div == @news.content
 
 = link_to 'Изменить', edit_news_path(@news) 
 = " | "
