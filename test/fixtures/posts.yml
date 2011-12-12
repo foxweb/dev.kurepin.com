@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type_id: 1
+  section_id: 1
+  author: MyString
+  email: MyString
+  www: MyString
+  source: MyString
+  title: MyString
+  body: MyText
+  info: MyText
+  keywords: MyString
+  rating: 1
+  public: false
+
+two:
+  type_id: 1
+  section_id: 1
+  author: MyString
+  email: MyString
+  www: MyString
+  source: MyString
+  title: MyString
+  body: MyText
+  info: MyText
+  keywords: MyString
+  rating: 1
+  public: false

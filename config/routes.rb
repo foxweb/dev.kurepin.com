@@ -1,9 +1,21 @@
 Dev::Application.routes.draw do
+  resources :posts
+
+  resources :sections
+
+  resources :types
+
+  resources :categories
+
   resources :news
 
   namespace :admin do
     resources :users
     resources :news
+    resources :posts
+    resources :types
+    resources :sections
+    resources :categories
   end
 
 

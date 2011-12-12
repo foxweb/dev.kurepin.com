@@ -31,13 +31,14 @@ html lang='ru'
       #inner
         #left
           ul#menu
-            li = link_to("Заметки",  news_index_path)
-            li = link_to("Файлы",    news_index_path)
-            li = link_to("Ссылки",   news_index_path)
-            li = link_to("Разное",   news_index_path)
+            li = link_to('Новости',  news_index_path)
+            li = link_to('Заметки',  posts_path)
+            li = link_to('Файлы',    news_index_path)
+            li = link_to('Ссылки',   news_index_path)
+            li = link_to('Разное',   news_index_path)
 
-            li = link_to("Фото",     "http://photo.kurepin.com/")
-            li = link_to("Обо мне",  "http://kurepin.com/")
+            li = link_to('Фото',     'http://photo.kurepin.com/')
+            li = link_to('Обо мне',  'http://kurepin.com/')
         #center
           - if flash[:alert]
             #flash.alert = flash[:alert]

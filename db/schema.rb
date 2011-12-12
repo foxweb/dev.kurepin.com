@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111123165357) do
+ActiveRecord::Schema.define(:version => 20111212221649) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -30,6 +36,38 @@ ActiveRecord::Schema.define(:version => 20111123165357) do
   create_table "news", :force => true do |t|
     t.string   "title"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.integer  "type_id"
+    t.integer  "section_id"
+    t.string   "author"
+    t.string   "email"
+    t.string   "www"
+    t.string   "source"
+    t.string   "title"
+    t.text     "body"
+    t.text     "info"
+    t.string   "keywords"
+    t.integer  "rating"
+    t.boolean  "public"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sections", :force => true do |t|
+    t.string   "name"
+    t.boolean  "lang"
+    t.text     "description"
+    t.integer  "num"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "types", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
