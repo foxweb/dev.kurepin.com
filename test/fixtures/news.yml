@@ -1,9 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
 one:
-  title: MyString
-  content: MyText
-
+  title: Запущена новая версия сайта
+  content: Запущена новая версия сайта
 two:
-  title: MyString
-  content: MyText
+  title: Выложены учебные исходники Delphi
+  content: Выложены учебные исходники

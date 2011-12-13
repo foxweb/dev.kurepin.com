@@ -1,7 +1,5 @@
 p#notice = notice
 h1 = @news.title
-div == @news.content
-
-= link_to 'Изменить', edit_news_path(@news) 
-= " | "
-= link_to 'Назад', news_index_path
+div#date = @news.created_at.strftime '%d.%m.%Y'
+div#news == @news.content
+div#back = link_to 'Назад', news_index_path

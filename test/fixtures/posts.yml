@@ -3,27 +3,27 @@
 one:
   type_id: 1
   section_id: 1
-  author: MyString
-  email: MyString
-  www: MyString
-  source: MyString
-  title: MyString
-  body: MyText
-  info: MyText
-  keywords: MyString
-  rating: 1
-  public: false
+  author: foxweb
+  email: a.kurepin@gmail.com
+  www: http://kurepin.com/
+  source: bla bla bla
+  title: Ежедневная архивация веб-проектов
+  body: Предлагается вашему вниманию bat-скрипт для ежедневной архивации home-директории вашего сайта и базы данных (MySQL).
+  info: Вот такую вещь я сделал сегодня. А перед этим - ещё год назад, работая в веб-студии.
+  keywords: mysql, winrar, bat, скрипты, windows
+  rating: 1024
+  public: true
 
 two:
-  type_id: 1
-  section_id: 1
-  author: MyString
-  email: MyString
-  www: MyString
-  source: MyString
-  title: MyString
-  body: MyText
-  info: MyText
-  keywords: MyString
-  rating: 1
+  type_id: 2
+  section_id: 2
+  author: Алексей Курепин
+  email: lesha@kurepin.com
+  www: kurepin.com
+  source: n/a
+  title: Основы протокола HTTP:\ заголовки и управление кэшированием
+  body: Для начала немного теории. Любой веб-программист, работая в протоколом HTTP, обязан знать, что поведение браузера, сервера, а также способы и правила обработки данных определяются HTTP-протоколом.
+  info: Как правильно управлять кэшированием и что для этого нужно — об этом статья.
+  keywords: HTTP заголовки кэширование HTML PHP
+  rating: 2048
   public: false

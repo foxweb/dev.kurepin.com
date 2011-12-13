@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  lang: false
-  description: MyText
+  id: 1
+  name: PHP, MySQL, веб-программирование
+  lang: true
+  description: Статьи и примеры программ на языке PHP
   num: 1
 
 two:
-  name: MyString
-  lang: false
-  description: MyText
-  num: 1
+  id: 2
+  name: MySQL
+  lang: 0
+  description: Статьи о MySQL
+  num: 4

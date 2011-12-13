@@ -16,6 +16,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml'
 gem 'slim-rails'
+gem 'mongoid', '~> 2.3'
+gem 'bson_ext', '~> 1.4'
 
 # Gems used only for assets and not required
 # in production environments by default.

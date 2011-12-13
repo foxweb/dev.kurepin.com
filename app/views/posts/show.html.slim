@@ -1,38 +1,32 @@
 p#notice = notice
 
-p
-  b Type: 
-  = @post.type.name
-p
-  b Section: 
-  = @post.section.name
-p
-  b Author: 
-  = @post.author
-p
-  b E-mail: 
-  = @post.email
-p
-  b Www: 
-  = link_to @post.www, @post.www
-p
-  b Source: 
-  = @post.source
 h1 = @post.title
-div == @post.body
-p
-  b Info: 
-  = @post.info
-p
-  b Keywords: 
-  = @post.keywords
-p
-  b Rating: 
-  = @post.rating
-p
-  b Public: 
-  = @post.public
+table#textinfo
+  tr
+    td
+      strong Раздел: 
+      span.red = @post.section.name
+    td
+      strong Автор: 
+      span.red = @post.author
+  tr
+    td
+      strong E-mail: 
+      span.red = @post.email
+    td
+      strong Www: 
+      span.red = @post.www.empty? ? '[не указан]' : (link_to @post.www, @post.www)
+  tr
+    td
+      strong Просмотров: 
+      span.red = @post.rating
+    td
+      strong Дата: 
+      span.red = @post.created_at.strftime '%d.%m.%Y'
 
-= link_to 'Edit', edit_post_path(@post)
-'|
-= link_to 'Back', posts_path
+- unless @post.info.empty?
+  div#textintro = @post.info
+
+div#textbody == @post.body
+
+div#back = link_to 'Назад', posts_path

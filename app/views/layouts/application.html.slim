@@ -1,9 +1,12 @@
 doctype 1.1
 html lang='ru'
   head
-    meta http-equiv="content-type" content="text/html; charset=UTF-8"
-    = stylesheet_link_tag    "application"
-    = javascript_include_tag "application"
+    meta http-equiv='content-type'  content='text/html; charset=UTF-8'
+    meta name='Name'                content='FoxWeb — программирование для студентов'
+    meta name='Keywords'            content='#{@post ? @post.keywords : ''}'
+    meta name='Description'         content=''
+    = stylesheet_link_tag    'application'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
     - if Rails.env.production?
       javascript:
@@ -25,7 +28,7 @@ html lang='ru'
     #header
       #sitename
         h1
-          a href="/" FoxWeb
+          a href='/' FoxWeb
         span#small софт для студентов
     #container
       #inner
@@ -63,7 +66,7 @@ html lang='ru'
         #footer
           #bottomleft
             #copyright
-              a href="/other/#copyright" class="copyright"
+              a.copyright href='/other/#copyright'
                 |&copy; 2003&mdash;2011 foxweb
                 br
                 br
