@@ -12,6 +12,12 @@ ru:
     logo: "Логотип"
     save: "Сохранить"
     save_and_exit: "Сохранить и выйти"
+  
+  views:
+    puffer:
+      base:
+        table:
+          choose: "Выбрать"
 
   date:
     formats:

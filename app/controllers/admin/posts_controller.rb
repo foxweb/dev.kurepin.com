@@ -24,8 +24,8 @@ class Admin::PostsController < Puffer::Base
 
   form do
     # field :id
-    field :type_id
-    field :section_id
+    field :type
+    field :section
     field :author
     field :email
     field :www
