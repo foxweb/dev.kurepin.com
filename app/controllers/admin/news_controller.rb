@@ -7,7 +7,7 @@ class Admin::NewsController < Puffer::Base
   index do
     # field :id
     field :title
-    field :content
+    # field :content
     field :created_at, :type => :date
     # field :updated_at
   end
