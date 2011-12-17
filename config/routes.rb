@@ -18,6 +18,9 @@ Dev::Application.routes.draw do
     resources :types
     resources :sections
     resources :categories
+    resources :pages
+    resources :layouts
+    resources :snippets
   end
 
 

@@ -16,8 +16,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml'
 gem 'slim-rails'
-#gem 'mongoid', '~> 2.3'
-#gem 'bson_ext', '~> 1.4'
+gem 'puffer_pages', :git => 'git://github.com/puffer/puffer_pages.git'
 
 # Gems used only for assets and not required
 # in production environments by default.

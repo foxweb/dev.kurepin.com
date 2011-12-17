@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111212221649) do
+ActiveRecord::Schema.define(:version => 20111217091723) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -33,12 +33,52 @@ ActiveRecord::Schema.define(:version => 20111212221649) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
+  create_table "layouts", :force => true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "layouts", ["name"], :name => "index_layouts_on_name"
+
   create_table "news", :force => true do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "page_parts", :force => true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "page_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "page_parts", ["name"], :name => "index_page_parts_on_name"
+  add_index "page_parts", ["page_id"], :name => "index_page_parts_on_page_id"
+
+  create_table "pages", :force => true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.string   "location"
+    t.text     "title"
+    t.text     "description"
+    t.text     "keywords"
+    t.string   "layout_name"
+    t.string   "status"
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth",       :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pages", ["location"], :name => "index_pages_on_location"
+  add_index "pages", ["slug"], :name => "index_pages_on_slug"
 
   create_table "posts", :force => true do |t|
     t.integer  "type_id"
@@ -65,6 +105,15 @@ ActiveRecord::Schema.define(:version => 20111212221649) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "snippets", :force => true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "snippets", ["name"], :name => "index_snippets_on_name"
 
   create_table "types", :force => true do |t|
     t.string   "name"
