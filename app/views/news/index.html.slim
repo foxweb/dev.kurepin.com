@@ -1,20 +1,9 @@
-h1 Список новостей
+h1 Что нового?
 
-table
-  tr
-    th Дата
-    th Заголовок
-    th
-    th
-    th
+ul#news
   - @news.each do |news|
-    tr
-      td = news.created_at.strftime '%d.%m.%Y'
-      td = news.title
-      td = link_to 'Показать', news
-      td = link_to 'Изменить', edit_news_path(news)
-      td = link_to 'Удалить', news, confirm: 'Вы уверены?', method: :delete
+    li
+      strong = news.created_at.strftime '%d.%m.%Y '
+      == news.content
 
-br
-
-= link_to 'Создать новость', new_news_path
+= link_to 'Назад', :root

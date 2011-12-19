@@ -18,10 +18,34 @@ ru:
       category: "Категория"
       type: "Тип"
       post: "Пост"
+      news: "Новости"
+      page: "Страница"
     attributes:
       post:
         title: "Заголовок"
-
+        body: "Тело"
+        type: "Тип"
+        section: "Раздел"
+        author: "Автор"
+        email: "E-mail автора"
+        www: "Сайт автора"
+        source: "Ссылка на источник"
+        info: "Краткое введение"
+        keyword: "Ключевые слова, через запятую"
+        rating: "Число просмотров поста"
+        public: "Публично?"
+    errors:
+      models:
+        page:
+          attributes:
+            slug:
+              root_slug_format: "Неправильный формат slug"
+  render:
+    tree_page:
+      view: "Посмотреть"
+      edit: "Изменить"
+      inherit: "Наследовать"
+      destroy: "Удалить"
 
   views:
     puffer:

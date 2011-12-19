@@ -175,7 +175,7 @@ img {
     line-height: 1.5em;
 }
 #center li {
-	list-style-image: url(/img/bullet.gif);
+	list-style-image: url(/assets/bullet.gif);
 }
 #center ol {
 	list-style-image: none;
@@ -417,8 +417,8 @@ div#lastinfo {
 .hl {background-color:#99FF33;font-weight:bold;}
 /* значок на числе комментов */
 .topicinfo { font-size: 80%; color: #9d9d9d; }
-.comments, #foxgb dt strong { padding-left: 13px; background: url(/img/comments.png) no-repeat left top; }
-.read { padding-left: 12px; background: url(/img/read.png) no-repeat left top; }
-.rate { padding-left: 13px; background: url(/img/rate.png) no-repeat left top; }
-.file { padding-left: 15px; margin-right: 15px; background: url(/img/file.png) no-repeat 1px 3px; }
-.file:hover { background: url(/img/filehover.png) no-repeat 1px 3px; }
+.comments, #foxgb dt strong { padding-left: 13px; background: url(/assets/comments.png) no-repeat left top; }
+.read { padding-left: 12px; background: url(/assets/read.png) no-repeat left top; }
+.rate { padding-left: 13px; background: url(/assets/rate.png) no-repeat left top; }
+.file { padding-left: 15px; margin-right: 15px; background: url(/assets/file.png) no-repeat 1px 3px; }
+.file:hover { background: url(/assets/filehover.png) no-repeat 1px 3px; }

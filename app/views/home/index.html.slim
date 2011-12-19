@@ -1,2 +1,20 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
+h1 Что нового?
+
+ul#news
+  - @news.each do |news|
+    li
+      strong = news.created_at.strftime '%d.%m.%Y '
+      == news.content
+
+div style="text-align: right; margin: -10px auto 10px auto" = link_to 'архив новостей', news_index_path
+
+h1 Свежие заметки
+ul#lasttexts
+  - @posts.each do |post|
+    li
+      = link_to post.title, post
+      |  
+      span.topicinfo
+        = post.created_at.strftime '%d.%m.%Y'
+        |, 
+        span.read = post.rating  
