@@ -11,6 +11,10 @@ Dev::Application.routes.draw do
 
   resources :news
 
+  match 'news/:year/:month/:day' => 'news#show', :constraints => { :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ }, :as => 'newsdate'
+
+  #resources :news
+
   namespace :admin do
     resources :users
     resources :news

@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/puffer/puffer.git
-  revision: 009a3ae123981e8f56fe7bc780bb23e3b5dbc06a
+  revision: 6921a76c96e9b8b51b56688c295afaed99dd7d2c
   specs:
     puffer (0.1.0)
       kaminari
@@ -66,11 +66,11 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.1.3)
+    coffee-script-source (1.2.0)
     diesel (0.1.5)
       railties
     erubis (2.7.0)
-    execjs (1.2.12)
+    execjs (1.2.13)
       multi_json (~> 1.0)
     haml (3.1.4)
     hike (1.2.1)
