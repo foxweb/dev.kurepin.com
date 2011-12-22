@@ -13,7 +13,7 @@ class NewsController < ApplicationController
   # GET /news/1
   # GET /news/1.json
   def show
-    @news = News.by_date(params[:year].to_i, params[:month].to_i, params[:day].to_i).first
+    @news = News.by_date(params[:year], params[:month], params[:day]).last
 
     respond_to do |format|
       format.html # show.html.erb

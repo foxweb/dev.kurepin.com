@@ -3,7 +3,8 @@ h1 Что нового?
 ul#news
   - @news.each do |news|
     li
-      strong = link_to news.created_at.strftime('%d.%m.%Y '), newsdate_path(news.created_at.year, news.created_at.month, news.created_at.day)
+      strong = link_to news.created_at.strftime('%d.%m.%Y'), newsdate_path(news.created_at.year, news.created_at.month, news.created_at.day)
+      |  
       == news.content
 
 = link_to 'Назад', :root

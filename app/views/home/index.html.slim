@@ -3,7 +3,8 @@ h1 Что нового?
 ul#news
   - @news.each do |news|
     li
-      strong = news.created_at.strftime '%d.%m.%Y '
+      strong = link_to news.created_at.strftime('%d.%m.%Y'), newsdate_path(news.created_at.year, news.created_at.month, news.created_at.day)
+      |  
       == news.content
 
 div style="text-align: right; margin: -10px auto 10px auto" = link_to 'архив новостей', news_index_path

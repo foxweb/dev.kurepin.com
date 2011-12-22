@@ -1,0 +1,28 @@
+one:
+  id: 1
+  name: index
+  slug:
+  location:
+  title: index
+  description:
+  keywords:
+  layout_name: foo_layout
+  status: published
+  parent_id:
+  lft: 1
+  rgt: 12
+  depth: 0
+two:
+  id: 5
+  name: foobar
+  slug: foobar
+  location: foobar
+  title:
+  description:
+  keywords:
+  layout_name: foo_layout
+  status: published
+  parent_id: 1
+  lft: 2
+  rgt: 3
+  depth: 1
