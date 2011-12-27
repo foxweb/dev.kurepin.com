@@ -1,5 +1,5 @@
 Dev::Application.routes.draw do
-  get "home/index"
+  #get "home/index" # comment this for test_should_get_index PASS
 
   resources :posts
   resources :sections

@@ -6,7 +6,7 @@ one:
   title: index
   description:
   keywords:
-  layout_name: foo_layout
+  layout_name: application
   status: published
   parent_id:
   lft: 1

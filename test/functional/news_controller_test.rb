@@ -25,7 +25,7 @@ class NewsControllerTest < ActionController::TestCase
   end
 
   test "should show news" do
-    get :show, id: @news.to_param
+    get :show, year: @news.created_at.year, month: @news.created_at.month, day: @news.created_at.day
     assert_response :success
   end
 
