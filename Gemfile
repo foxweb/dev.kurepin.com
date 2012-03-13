@@ -17,6 +17,7 @@ gem 'mini_magick'
 gem 'haml'
 gem 'slim-rails'
 gem 'puffer_pages', :git => 'git://github.com/puffer/puffer_pages.git'
+gem 'rails3-jquery-autocomplete', '~> 1.0.6'
 
 # Gems used only for assets and not required
 # in production environments by default.

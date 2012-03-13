@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+  autocomplete :post, :title
+
   # GET /posts
   # GET /posts.json
   def index

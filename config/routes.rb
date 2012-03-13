@@ -1,7 +1,9 @@
 Dev::Application.routes.draw do
   #get "home/index" # comment this for test_should_get_index PASS
 
-  resources :posts
+  resources :posts do
+    get :autocomplete_post_title, :on => :collection
+  end
   resources :sections
   resources :types
   resources :categories
