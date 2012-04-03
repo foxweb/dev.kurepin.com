@@ -24,7 +24,7 @@ test:
 
 production:
   adapter: mysql2
-  database: foxweb_dev
+  database: foxweb_dev_dev
   encoding: utf8
   username: root
   password:

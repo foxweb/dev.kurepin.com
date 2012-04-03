@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Username:
+  = @comment.username
+p
+  strong Email:
+  = @comment.email
+p
+  strong Body:
+  = @comment.body
+p
+  strong Post:
+  = @comment.post
+p
+  strong Rating:
+  = @comment.rating
+
+= link_to 'Edit', edit_comment_path(@comment)
+'|
+= link_to 'Back', comments_path

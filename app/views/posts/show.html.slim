@@ -29,4 +29,22 @@ table#textinfo
 
 div#textbody == @post.body
 
+h1#comments Комментарии
+dl#foxgb
+  = render @post.comments
+
+
+h2 Добавить комментарий:
+= form_for([@post, @post.comments.build]) do |f|
+  div class="field"
+    = f.label :username
+    br
+    = f.text_field :username
+  div class="field"
+    = f.label :body
+    br
+    = f.text_area :body
+  div class="actions"
+    = f.submit
+
 div#back = link_to 'Назад', posts_path

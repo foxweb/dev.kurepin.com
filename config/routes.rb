@@ -1,8 +1,11 @@
 Dev::Application.routes.draw do
+  resources :comments
+
   #get "home/index" # comment this for test_should_get_index PASS
 
   resources :posts do
     get :autocomplete_post_title, :on => :collection
+    resources :comments
   end
   resources :sections
   resources :types
@@ -17,6 +20,7 @@ Dev::Application.routes.draw do
     resources :users
     resources :news
     resources :posts
+    resources :comments
     resources :types
     resources :sections
     resources :categories

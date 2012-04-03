@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  username: Вася
+  email: vasya@gmail.com
+  body: Тестируем коменты.
+  rating: 5
+
+two:
+  username: Федя
+  email: fedya@mail.ru
+  body: Проверка связи
+  rating: 2

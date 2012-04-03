@@ -18,6 +18,7 @@ gem 'mini_magick'
 gem 'haml'
 gem 'slim-rails'
 gem 'rails3-jquery-autocomplete', '~> 1.0.6'
+gem 'ruby-prof'
 
 # Gems used only for assets and not required
 # in production environments by default.

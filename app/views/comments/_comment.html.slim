@@ -1,0 +1,9 @@
+dt
+  strong
+  	= comment.username
+  = comment.created_at.strftime ' %d.%m.%Y %H:%M:%S ' 
+  = link_to '#', comment_path, :anchor => comment.id
+  |&nbsp;
+  = link_to 'Удалить', [comment.post, comment], :confirm => 'Вы уверены?', :method => :delete
+dd
+  == simple_format comment.body
