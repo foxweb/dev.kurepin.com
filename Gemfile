@@ -37,7 +37,7 @@ gem 'jquery-rails'
 group :development do
   gem 'capistrano'
   gem 'rvm-capistrano'
-  gem 'capistrano-redmine', :path => '../capistrano-redmine'
+  gem 'capistrano-redmine', :path => '/home/foxweb/work/capistrano-redmine'
 end
 
 # To use debugger
