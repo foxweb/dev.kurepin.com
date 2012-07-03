@@ -34,7 +34,11 @@ gem 'jquery-rails'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+group :development do
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+  gem 'capistrano-redmine', :path => '../capistrano-redmine'
+end
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'

@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(:version => 20120324123338) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "ckeditor_assets", :force => true do |t|
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(:version => 20120324123338) do
     t.integer  "assetable_id"
     t.string   "assetable_type",    :limit => 30
     t.string   "type",              :limit => 30
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(:version => 20120324123338) do
   create_table "layouts", :force => true do |t|
     t.string   "name"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "layouts", ["name"], :name => "index_layouts_on_name"
@@ -57,16 +57,16 @@ ActiveRecord::Schema.define(:version => 20120324123338) do
   create_table "news", :force => true do |t|
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "page_parts", :force => true do |t|
     t.string   "name"
     t.text     "body"
     t.integer  "page_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "page_parts", ["name"], :name => "index_page_parts_on_name"
@@ -85,8 +85,8 @@ ActiveRecord::Schema.define(:version => 20120324123338) do
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth",       :default => 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   add_index "pages", ["location"], :name => "index_pages_on_location"
@@ -105,8 +105,8 @@ ActiveRecord::Schema.define(:version => 20120324123338) do
     t.string   "keywords"
     t.integer  "rating"
     t.boolean  "public"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "sections", :force => true do |t|
@@ -114,23 +114,23 @@ ActiveRecord::Schema.define(:version => 20120324123338) do
     t.boolean  "lang"
     t.text     "description"
     t.integer  "num"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "snippets", :force => true do |t|
     t.string   "name"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "snippets", ["name"], :name => "index_snippets_on_name"
 
   create_table "types", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -139,8 +139,8 @@ ActiveRecord::Schema.define(:version => 20120324123338) do
     t.string   "salt",               :limit => 128
     t.string   "confirmation_token", :limit => 128
     t.string   "remember_token",     :limit => 128
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
