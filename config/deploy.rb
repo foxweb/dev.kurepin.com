@@ -1,15 +1,16 @@
-set :rvm_ruby_string, '1.9.3@dev'
+# -*- encoding: utf-8 -*-
+set :rvm_ruby_string, "1.9.3@dev"
 set :rvm_install_type, :stable
 set :rvm_install_shell, :zsh
 require "rvm/capistrano"
 
-
-set :redmine_site, 'http://localhost:3000'
-set :redmine_token, '4639e0d4a5f7ae7f7024f3e74c6780bdf1dc95aa'
-set :redmine_project, 1
-set :redmine_from_status, 1
-set :redmine_to_status, 3
-
+# settings for capistrano-redmine
+set :redmine_site, "http://localhost:3000"
+set :redmine_token, "376ba30fca80867d10a0ec0b505e5c97834901e3"
+set :redmine_projects, "test-project"
+set :redmine_from_status, 3
+set :redmine_to_status, 1
+require "capistrano-redmine"
 
 default_run_options[:pty] = true
 
@@ -17,7 +18,7 @@ set :application, "dev.kurepin.com"
 set :repository,  "git@github.com:foxweb/dev.kurepin.com.git"
 
 set :scm, :git
-set :user, 'foxweb'
+set :user, "foxweb"
 set :use_sudo, false
 set :deploy_to, "/home/foxweb/work/deploy/#{application}"
 set :deploy_via, :remote_cache
@@ -34,11 +35,11 @@ set :scm_user, "deployer"
 set :branch, "master"
 ssh_options[:forward_agent] = true
 
-before 'deploy:setup', 'rvm:install_rvm'
+before "deploy:setup", "rvm:install_rvm"
 
 after "deploy", "deploy:bundle_gems"
 after "deploy:bundle_gems", "deploy:restart"
-after "deploy", "redmine:update"
+after "deploy:bundle_gems", "redmine:update"
 
 namespace :deploy do
   task :bundle_gems do
@@ -50,4 +51,3 @@ namespace :deploy do
     run "touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
-
