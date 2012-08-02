@@ -4,24 +4,25 @@ h1 = @post.title
 table#textinfo
   tr
     td
-      strong Раздел: 
-      span.red = @post.section.name
+      strong
+        'Раздел:
+      span.red = link_to @post.section.name, section_path(@post.section_id)
     td
-      strong Автор: 
+      strong Автор:
       span.red = @post.author
   tr
     td
-      strong E-mail: 
+      strong E-mail:
       span.red = @post.email
     td
-      strong Www: 
+      strong Www:
       span.red = @post.www.empty? ? '[не указан]' : (link_to @post.www, @post.www)
   tr
     td
-      strong Просмотров: 
+      strong Просмотров:
       span.red = @post.rating
     td
-      strong Дата: 
+      strong Дата:
       span.red = @post.created_at.strftime '%d.%m.%Y'
 
 - unless @post.info.empty?
