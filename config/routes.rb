@@ -1,4 +1,6 @@
 Dev::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   resources :comments
 
   #get "home/index" # comment this for test_should_get_index PASS

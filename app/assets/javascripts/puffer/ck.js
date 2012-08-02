@@ -1,3 +1,4 @@
 //= require_self
-//= require puffer/ckeditor
+//= require jquery
+//= require ckeditor/init
 CKEDITOR_BASEPATH = '/javascripts/ckeditor/'
