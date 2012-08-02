@@ -18,7 +18,7 @@ table
       td= section.num
       td= link_to 'Show', section
       td= link_to 'Edit', edit_section_path(section)
-      td= link_to 'Destroy', section, :confirm => 'Are you sure?', :method => :delete
+      td= link_to 'Destroy', section, :data => {:confirm => 'Are you sure?'}, :method => :delete
 
 br
 
