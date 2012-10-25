@@ -1,0 +1,33 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @source.name
+p
+  strong Md5:
+  = @source.md5
+p
+  strong Author:
+  = @source.author
+p
+  strong Email:
+  = @source.email
+p
+  strong Www:
+  = @source.www
+p
+  strong Section:
+  = @source.section.name
+p
+  strong Category:
+  = @source.category.name
+p
+  strong Description:
+  = @source.description
+p
+  strong Rating:
+  = @source.rating
+
+= link_to 'Edit', edit_source_path(@source)
+'|
+= link_to 'Back', sources_path

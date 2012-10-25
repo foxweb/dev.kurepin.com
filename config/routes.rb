@@ -1,8 +1,13 @@
 Dev::Application.routes.draw do
+  namespace :admin do
+    resources :sources
+  end
+
+  namespace :admin do
+    resources :links
+  end
+
   mount Ckeditor::Engine => '/ckeditor'
-
-  resources :comments
-
   #get "home/index" # comment this for test_should_get_index PASS
 
   resources :posts do
@@ -13,6 +18,8 @@ Dev::Application.routes.draw do
   resources :types
   resources :categories
   resources :news
+  resources :sources
+  resources :links
 
   match 'news/:year/:month/:day' => 'news#show',
     :constraints => { :year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{1,2}/ },

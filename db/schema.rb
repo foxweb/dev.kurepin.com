@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120324123338) do
+ActiveRecord::Schema.define(:version => 20120911130341) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -53,6 +53,18 @@ ActiveRecord::Schema.define(:version => 20120324123338) do
   end
 
   add_index "layouts", ["name"], :name => "index_layouts_on_name"
+
+  create_table "links", :force => true do |t|
+    t.string   "url"
+    t.string   "title"
+    t.string   "author"
+    t.string   "email"
+    t.text     "description"
+    t.string   "keywords"
+    t.integer  "rating"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "news", :force => true do |t|
     t.string   "title"
@@ -126,6 +138,20 @@ ActiveRecord::Schema.define(:version => 20120324123338) do
   end
 
   add_index "snippets", ["name"], :name => "index_snippets_on_name"
+
+  create_table "sources", :force => true do |t|
+    t.string   "name"
+    t.string   "md5"
+    t.string   "author"
+    t.string   "email"
+    t.string   "www"
+    t.integer  "section_id"
+    t.integer  "category_id"
+    t.text     "description"
+    t.integer  "rating"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "types", :force => true do |t|
     t.string   "name"
