@@ -9,7 +9,7 @@ ru:
 
   puffer:
     logout: "Выйти"
-    logo: "Логотип"
+    logo: "Админка"
     save: "Сохранить"
     save_and_exit: "Сохранить и выйти"
 
