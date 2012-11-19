@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'rails', '~>3.2'
 gem 'mysql2'
+gem 'unicorn'
 gem 'execjs'
 gem 'therubyracer'
 gem 'puffer', git: 'git://github.com/puffer/puffer.git'
@@ -14,6 +15,8 @@ gem 'mini_magick'
 gem 'slim-rails'
 gem 'rails3-jquery-autocomplete', '~> 1.0.6'
 gem 'ruby-prof'
+gem 'rack-mini-profiler'
+gem 'foreman'
 
 group :assets do
   gem 'sass-rails', "~> 3.2.0"
@@ -27,11 +30,19 @@ group :development do
   gem 'capistrano'
   gem 'rvm-capistrano'
   gem 'capistrano-redmine', :require => false
-  gem 'awesome_print'
 end
 
 
 group :test do
   gem 'turn', :require => false
   gem 'minitest'
+end
+
+group :test, :development do
+  gem 'terminal-notifier-guard'
+  gem 'guard-test'
+  gem 'guard-spin'
+  gem 'rb-inotify', '~> 0.8.8'
+  gem 'awesome_print'
+  gem 'pry-rails'
 end
