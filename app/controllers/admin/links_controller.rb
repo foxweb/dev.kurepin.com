@@ -10,8 +10,6 @@ class Admin::LinksController < Puffer::Base
     field :title
     field :author
     field :email
-    field :description
-    field :keywords
     field :rating
     # field :created_at
     # field :updated_at
