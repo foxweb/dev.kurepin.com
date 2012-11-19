@@ -24,7 +24,7 @@ class Admin::PostsController < Puffer::Base
 
   form do
     # field :id
-    field :type_id, :type => :select, :select => Type.for_select
+    #field :type_id, :type => :select, :select => Type.for_select
     field :section_id, :type => :select, :select => Section.for_select
     field :author
     field :email

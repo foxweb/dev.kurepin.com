@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
 
   def index
-    @news = News.all :order => 'created_at DESC'
+    @news = News.order('created_at DESC').all
   end
 
   def show

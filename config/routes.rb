@@ -1,11 +1,4 @@
 Dev::Application.routes.draw do
-  namespace :admin do
-    resources :sources
-  end
-
-  namespace :admin do
-    resources :links
-  end
 
   mount Ckeditor::Engine => '/ckeditor'
   #get "home/index" # comment this for test_should_get_index PASS
@@ -15,7 +8,6 @@ Dev::Application.routes.draw do
     resources :comments
   end
   resources :sections
-  resources :types
   resources :categories
   resources :news
   resources :sources
@@ -30,12 +22,13 @@ Dev::Application.routes.draw do
     resources :news
     resources :posts
     resources :comments
-    resources :types
     resources :sections
     resources :categories
     resources :pages
     resources :layouts
     resources :snippets
+    resources :sources
+    resources :links
   end
 
   root :to => 'home#index'

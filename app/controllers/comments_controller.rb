@@ -1,14 +1,14 @@
 class CommentsController < ApplicationController
 
-  http_basic_authenticate_with :name => "admin", :password => "password", :only => :destroy
+  http_basic_authenticate_with name: 'admin', password: 'password', only: :destroy
 
   def index
     @comments = Comment.all
   end
 
   def create
-    @post = Post.find(params[:post_id])
-    @comment = @post.comments.create(params[:comment])
+    @post = Post.find params[:post_id]
+    @comment = @post.comments.create params[:comment]
 
     respond_to do |format|
       if @comment.save
@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
+    @comment = Comment.find params[:id]
     @comment.destroy
 
     redirect_to @comment.post

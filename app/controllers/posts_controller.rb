@@ -3,10 +3,10 @@ class PostsController < ApplicationController
   autocomplete :post, :title
 
   def index
-    @sections = Section.all :order => 'num, id'
+    @sections = Section.order(:num, :id).includes(:posts).all
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find params[:id]
   end
 end
