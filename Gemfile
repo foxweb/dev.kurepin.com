@@ -42,7 +42,7 @@ group :test, :development do
   gem 'terminal-notifier-guard'
   gem 'guard-test'
   gem 'guard-spin'
-  gem 'rb-inotify', '~> 0.8.8'
+  gem 'rb-fsevent', '~> 0.9.1'
   gem 'awesome_print'
   gem 'pry-rails'
 end

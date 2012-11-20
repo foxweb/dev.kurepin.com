@@ -13,3 +13,7 @@ env:
 before_script:
   - mysql -e 'create database dev_test;'
   - bundle exec rake db:migrate
+
+branches:
+  only:
+    - master
