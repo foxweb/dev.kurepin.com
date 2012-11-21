@@ -6,7 +6,7 @@ timeout 30
 worker_processes 2
 
 pid pid_file
-listen 9024
+listen 3000
 
 preload_app true
 
