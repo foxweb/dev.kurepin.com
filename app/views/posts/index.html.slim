@@ -3,14 +3,6 @@ h1 Заметки
 - @sections.each do |section|
   - unless section.posts.empty?
     h2 =link_to section.name, section
-    ul
-      - section.posts.each do |post|
-        li
-          =link_to post.title, post
-          |  
-          span.topicinfo
-            span.read =post.rating
-          - unless post.info.empty?
-            p =post.info
+    = render partial: 'post', locals: { section: section }
 
 = link_to 'Назад', :root

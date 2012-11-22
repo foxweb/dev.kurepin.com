@@ -1,18 +1,6 @@
 p#notice = notice
 
-p
-  b Name:
-  = @section.name
-p
-  b Lang:
-  = @section.lang
-p
-  b Description:
-  = @section.description
-p
-  b Num:
-  = @section.num
+h1 = @section.name
+= render partial: 'posts/post', locals: { section: @section }
 
-= link_to 'Edit', edit_section_path(@section)
-'|
-= link_to 'Back', sections_path
+= link_to 'Назад', sections_path

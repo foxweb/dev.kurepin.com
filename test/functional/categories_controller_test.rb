@@ -6,12 +6,6 @@ class CategoriesControllerTest < ActionController::TestCase
     @category = categories(:one)
   end
 
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:categories)
-  end
-
   test "should show category" do
     get :show, id: @category.to_param
     assert_response :success

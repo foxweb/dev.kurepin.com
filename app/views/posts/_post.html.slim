@@ -1,0 +1,9 @@
+ul
+  - section.posts.each do |post|
+    li
+      =link_to post.title, post
+      |
+      span.topicinfo
+        span.read =post.rating
+      - unless post.info.empty?
+        p =post.info
