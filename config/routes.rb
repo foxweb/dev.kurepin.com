@@ -1,5 +1,6 @@
 Dev::Application.routes.draw do
 
+  mount Puffer::Engine => '/'
   mount Ckeditor::Engine => '/ckeditor'
   #get "home/index" # comment this for test_should_get_index PASS
 
