@@ -3,9 +3,6 @@ one:
   name: index
   slug:
   location:
-  title: index
-  description:
-  keywords:
   layout_name: application
   status: published
   parent_id:
@@ -17,9 +14,6 @@ two:
   name: foobar
   slug: foobar
   location: foobar
-  title:
-  description:
-  keywords:
   layout_name: foo_layout
   status: published
   parent_id: 1
