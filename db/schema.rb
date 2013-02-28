@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(:version => 20130228095523) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "ckeditor_assets", :force => true do |t|
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(:version => 20130228095523) do
     t.integer  "assetable_id"
     t.string   "assetable_type",    :limit => 30
     t.string   "type",              :limit => 30
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
@@ -69,8 +69,8 @@ ActiveRecord::Schema.define(:version => 20130228095523) do
   create_table "news", :force => true do |t|
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "origins", :force => true do |t|
@@ -125,8 +125,8 @@ ActiveRecord::Schema.define(:version => 20130228095523) do
     t.string   "keywords"
     t.integer  "rating"
     t.boolean  "public"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "sections", :force => true do |t|
@@ -134,8 +134,8 @@ ActiveRecord::Schema.define(:version => 20130228095523) do
     t.boolean  "lang"
     t.text     "description"
     t.integer  "num"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "snippets", :force => true do |t|
@@ -161,20 +161,14 @@ ActiveRecord::Schema.define(:version => 20130228095523) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "types", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", :force => true do |t|
     t.string   "email"
     t.string   "encrypted_password", :limit => 128
     t.string   "salt",               :limit => 128
     t.string   "confirmation_token", :limit => 128
     t.string   "remember_token",     :limit => 128
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
