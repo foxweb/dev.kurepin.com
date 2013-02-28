@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/puffer/puffer_pages.git
-  revision: a8d872192e5fc0efe76f7627f02d25bf6eadf6cc
+  revision: 08da03ec2eec3000b034aab208b1f1a40716660f
   specs:
     puffer_pages (0.5.0)
       activeuuid (>= 0.4.0)
@@ -103,7 +103,7 @@ GEM
       test-unit (~> 2.2)
     highline (1.6.15)
     hike (1.2.1)
-    i18n (0.6.2)
+    i18n (0.6.4)
     journey (1.0.4)
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
@@ -125,7 +125,7 @@ GEM
     mime-types (1.21)
     mini_magick (3.5.0)
       subexec (~> 0.2.1)
-    minitest (4.6.1)
+    minitest (4.6.2)
     multi_json (1.6.1)
     mysql2 (0.3.11)
     nested_set (1.7.1)

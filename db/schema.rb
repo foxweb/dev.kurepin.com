@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120911130341) do
+ActiveRecord::Schema.define(:version => 20130228095523) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(:version => 20120911130341) do
   create_table "layouts", :force => true do |t|
     t.string   "name"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "layouts", ["name"], :name => "index_layouts_on_name"
@@ -73,12 +73,22 @@ ActiveRecord::Schema.define(:version => 20120911130341) do
     t.datetime "updated_at"
   end
 
+  create_table "origins", :force => true do |t|
+    t.string   "name"
+    t.string   "host"
+    t.string   "path"
+    t.string   "token"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "page_parts", :force => true do |t|
     t.string   "name"
     t.text     "body"
-    t.integer  "page_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.uuid     "page_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "handler"
   end
 
   add_index "page_parts", ["name"], :name => "index_page_parts_on_name"
@@ -87,18 +97,16 @@ ActiveRecord::Schema.define(:version => 20120911130341) do
   create_table "pages", :force => true do |t|
     t.string   "name"
     t.string   "slug"
-    t.string   "location"
-    t.text     "title"
-    t.text     "description"
-    t.text     "keywords"
     t.string   "layout_name"
     t.string   "status"
-    t.integer  "parent_id"
+    t.uuid     "parent_id"
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth",       :default => 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "location"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.text     "locales"
   end
 
   add_index "pages", ["location"], :name => "index_pages_on_location"
@@ -133,8 +141,8 @@ ActiveRecord::Schema.define(:version => 20120911130341) do
   create_table "snippets", :force => true do |t|
     t.string   "name"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "snippets", ["name"], :name => "index_snippets_on_name"
