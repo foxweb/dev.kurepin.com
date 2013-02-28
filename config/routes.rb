@@ -1,8 +1,5 @@
 Dev::Application.routes.draw do
 
-  mount PufferPages::Engine => '/pages'
-  mount Puffer::Engine => '/'
-  mount Ckeditor::Engine => '/ckeditor'
   #get "home/index" # comment this for test_should_get_index PASS
 
   resources :posts do
@@ -35,4 +32,8 @@ Dev::Application.routes.draw do
   end
 
   root to: 'home#index'
+
+  mount Puffer::Engine => '/'
+  mount Ckeditor::Engine => '/ckeditor'
+  mount PufferPages::Engine => '/'
 end
