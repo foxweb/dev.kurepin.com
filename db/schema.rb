@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121115105447) do
+ActiveRecord::Schema.define(:version => 20120911130341) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -79,7 +79,6 @@ ActiveRecord::Schema.define(:version => 20121115105447) do
     t.integer  "page_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "locale"
   end
 
   add_index "page_parts", ["name"], :name => "index_page_parts_on_name"
