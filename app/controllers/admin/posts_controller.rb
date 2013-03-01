@@ -24,13 +24,13 @@ class Admin::PostsController < Puffer::Base
 
   form do
     # field :id
-    field :section_id, type: :select, select: Section.for_select
+    # field :section_id, type: :select, select: Section.for_select
     field :author
     field :email
     field :www
     field :source
     field :title
-    field :body, :type => :ckeditor
+    field :body, type: :ckeditor
     field :info
     field :keywords
     field :rating
