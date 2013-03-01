@@ -4,14 +4,6 @@ set :rvm_install_type, :stable
 set :rvm_install_shell, :zsh
 require "rvm/capistrano"
 
-# settings for capistrano-redmine
-set :redmine_site, "http://localhost:3000"
-set :redmine_token, "376ba30fca80867d10a0ec0b505e5c97834901e3"
-set :redmine_projects, "test-project"
-set :redmine_from_status, 3
-set :redmine_to_status, 1
-require "capistrano-redmine"
-
 default_run_options[:pty] = true
 
 set :application, "dev.kurepin.com"
@@ -25,13 +17,13 @@ set :deploy_via, :remote_cache
 
 # role :web, "dev.kurepin.com"
 # role :app, "dev.kurepin.com"
-# role :db,  "dev.kurepin.com", :primary => true
+# role :db,  "dev.kurepin.com", primary: true
 
-role :web, "localhost"
-role :app, "localhost"
-role :db,  "localhost", :primary => true
+role :web, "foxweb.dyndns-home.com"
+role :app, "foxweb.dyndns-home.com"
+role :db,  "foxweb.dyndns-home.com", primary: true
 
-set :scm_user, "deployer"
+set :scm_user, "foxweb"
 set :branch, "master"
 ssh_options[:forward_agent] = true
 
@@ -39,7 +31,6 @@ before "deploy:setup", "rvm:install_rvm"
 
 after "deploy", "deploy:bundle_gems"
 after "deploy:bundle_gems", "deploy:restart"
-after "deploy:bundle_gems", "redmine:update"
 
 namespace :deploy do
   task :bundle_gems do
@@ -47,7 +38,7 @@ namespace :deploy do
   end
   task :start do ; end
   task :stop do ; end
-  task :restart, :roles => :app, :except => { :no_release => true } do
+  task :restart, roles: :app, except: { no_release: true } do
     run "touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
