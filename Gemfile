@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'rails', '~>3.2'
 gem 'mysql2'
@@ -17,6 +17,7 @@ gem 'rails3-jquery-autocomplete', '~> 1.0.6'
 gem 'ruby-prof'
 gem 'rack-mini-profiler'
 gem 'foreman'
+gem 'rails-i18n'
 
 group :assets do
   gem 'sass-rails', '~> 3.2.0'
@@ -45,4 +46,5 @@ group :test, :development do
   gem 'rb-fsevent', '~> 0.9.1'
   gem 'awesome_print'
   gem 'pry-rails'
+  gem 'zeus'
 end
