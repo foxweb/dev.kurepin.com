@@ -1,38 +1,41 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~>3.2'
+gem 'rails', '4.0.0.rc1'
 gem 'mysql2'
 gem 'unicorn'
 gem 'execjs'
 gem 'therubyracer'
 gem 'puffer', github: 'puffer/puffer'
-gem 'puffer_pages', github: 'puffer/puffer_pages'
+gem 'puffer_pages', github: 'foxweb/puffer_pages'
 gem 'bcrypt-ruby'
-gem 'clearance'
+gem 'clearance', '1.0.0.rc7'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'slim-rails'
-gem 'rails3-jquery-autocomplete', '~> 1.0.6'
 gem 'ruby-prof'
 gem 'rack-mini-profiler'
 gem 'foreman'
 gem 'rails-i18n'
 
-group :assets do
-  gem 'sass-rails', '~> 3.2.0'
-  gem 'coffee-rails', '~> 3.2.0'
-  gem 'uglifier'
-end
+# assets
+gem 'sass-rails',   '~> 4.0.0.rc1'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
 
 gem 'jquery-rails'
+
+# add these gems to help with the transition:
+gem 'protected_attributes'
+gem 'rails-observers'
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
 
 group :development do
   gem 'capistrano'
   gem 'rvm-capistrano'
   gem 'capistrano-redmine', require: false
 end
-
 
 group :test do
   gem 'turn', require: false

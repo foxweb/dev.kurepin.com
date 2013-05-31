@@ -3,7 +3,6 @@ Dev::Application.routes.draw do
   #get "home/index" # comment this for test_should_get_index PASS
 
   resources :posts do
-    get :autocomplete_post_title, on: :collection
     resources :comments
   end
   resources :sections
@@ -12,7 +11,7 @@ Dev::Application.routes.draw do
   resources :sources
   resources :links
 
-  match 'news/:year/:month/:day' => 'news#show',
+  get 'news/:year/:month/:day' => 'news#show',
     constraints: { year: /\d{4}/, month: /\d{1,2}/, day: /\d{1,2}/ },
     as: 'newsdate'
 
